@@ -1,5 +1,5 @@
 <div class="d-flex flex-column bg-white p-1 py-3 rounded" style="width: 100%; height: 75vh;">
-  <form action="/add" method="post" class="input-group d-flex flex-column justify-content-between" style="max-width: 65%; height: 100%;">
+  <form action="/add" method="post" enctype="multipart/form-data" class="input-group d-flex flex-column justify-content-between" style="max-width: 65%; height: 100%;">
     <table class="table table-borderless">
       <tbody>
         <tr>
@@ -7,7 +7,7 @@
             <label class="fw-normal" for="name">Nama*</label>
           </th>
           <td>
-            <input class="form-control" type="text" placeholder="Uciha Rudy" id="name">
+            <input class="form-control" type="text" placeholder="Uciha Rudy" id="name" name="name" required>
           </td>
         </tr>
         <tr>
@@ -15,7 +15,7 @@
             <label class="fw-normal" for="price">Harga*</label>
           </th>
           <td>
-            <input class="form-control" type="number" placeholder="400000" id="price">
+            <input class="form-control" type="number" placeholder="400000" id="price" name="price" required>
           </td>
         </tr>
         <tr>
@@ -23,7 +23,7 @@
             <label class="fw-normal" for="photo">Foto*</label>
           </th>
           <td>
-            <input class="form-control" type="file" placeholder="400000" id="photo">
+            <input class="form-control" type="file" id="photo" name="photo" required>
           </td>
         </tr>
         <tr>
@@ -31,7 +31,7 @@
             <label class="fw-normal" for="start">Start Rent</label>
           </th>
           <td>
-            <input class="form-control" type="date" placeholder="-" id="start">
+            <input class="form-control" type="date" placeholder="-" id="start" name="startRent">
           </td>
         </tr>
         <tr>
@@ -39,7 +39,7 @@
             <label class="fw-normal" for="finish">Finish Rent</label>
           </th>
           <td>
-            <input class="form-control" type="date" placeholder="-" id="finish">
+            <input class="form-control" type="date" placeholder="-" id="finish" name="finishRent">
           </td>
         </tr>
         <tr>
@@ -47,7 +47,7 @@
             <label class="fw-normal" for="created">Created Rent</label>
           </th>
           <td>
-            <input class="form-control" type="date" placeholder="-" id="created">
+            <input class="form-control" type="date" placeholder="-" id="created" name="createdRent">
           </td>
         </tr>
         <tr>
@@ -55,13 +55,13 @@
             <label class="fw-normal" for="updated">Updated Rent</label>
           </th>
           <td>
-            <input class="form-control" type="date" placeholder="-" id="updated">
+            <input class="form-control" type="date" placeholder="-" id="updated" name="updatedRent">
           </td>
         </tr>
       </tbody>
     </table>
     <div class="px-2">
-      <button class="btn btn-outline-danger" type="submit">Cancel</button>
+      <button class="btn btn-outline-danger" type="reset">Cancel</button>
       <button class="btn btn-success" type="submit">Save</button>
     </div>
   </form>

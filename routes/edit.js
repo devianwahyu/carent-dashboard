@@ -6,6 +6,7 @@ router.get('/', (req, res) => {
     title: 'Edit Car',
     sidebarTitle: 'Cars',
     sidebarMenu: 'List Car',
+    sidebarMenuLink: '/car',
     sectionTitle: 'Edit Car',
     breadcrumb: 'Edit Car',
     breadcrumbLink: 'edit',

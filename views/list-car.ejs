@@ -18,10 +18,8 @@
     <button class="btn btn-outline-primary btn-sm px-2 fw-bold me-2">Large</button>
   </div>
   <div class="mt-4 d-flex gap-4 flex-wrap">
-    <%- include('./partials/card.ejs') %>
-    <%- include('./partials/card.ejs') %>
-    <%- include('./partials/card.ejs') %>
-    <%- include('./partials/card.ejs') %>
-    <%- include('./partials/card.ejs') %>
+    <% cars.forEach(car => { %>
+      <%- include('./partials/card.ejs', {car}) %>
+    <% }) %>
   </div>
 </div>

@@ -7,6 +7,7 @@ router.get('/', (req, res) => {
     title: 'Dashboard',
     sidebarTitle: 'Dashboard',
     sidebarMenu: 'Dashboard',
+    sidebarMenuLink: '/dashboard',
     layout: 'layouts/layout'
   };
   res.render('dashboard', locals);
