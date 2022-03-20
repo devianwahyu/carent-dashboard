@@ -1,0 +1,27 @@
+<div class="w-100 bg-light px-4 py-3" style="min-height: 100vh;">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb fw-bold">
+      <li class="breadcrumb-item"><a href="#" style="text-decoration: none">Cars</a></li>
+      <li class="breadcrumb-item"><a href="#" style="text-decoration: none">List Car</a></li>
+    </ol>
+  </nav>
+  <div class="d-flex justify-content-between align-items-center">
+    <h3>List Car</h3>
+    <a href="/add" class="btn btn-primary">
+      <span class="fw-bold">+ Add New Car</span>
+    </a>
+  </div>
+  <div class="d-flex mt-3">
+    <button class="btn btn-outline-primary btn-sm px-2 fw-bold me-2">All</button>
+    <button class="btn btn-outline-primary btn-sm px-2 fw-bold me-2">Small</button>
+    <button class="btn btn-outline-primary btn-sm px-2 fw-bold me-2">Medium</button>
+    <button class="btn btn-outline-primary btn-sm px-2 fw-bold me-2">Large</button>
+  </div>
+  <div class="mt-4 d-flex gap-4 flex-wrap">
+    <%- include('./partials/card.ejs') %>
+    <%- include('./partials/card.ejs') %>
+    <%- include('./partials/card.ejs') %>
+    <%- include('./partials/card.ejs') %>
+    <%- include('./partials/card.ejs') %>
+  </div>
+</div>

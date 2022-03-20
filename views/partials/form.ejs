@@ -1,0 +1,68 @@
+<div class="d-flex flex-column bg-white p-1 py-3 rounded" style="width: 100%; height: 75vh;">
+  <form action="/add" method="post" class="input-group d-flex flex-column justify-content-between" style="max-width: 65%; height: 100%;">
+    <table class="table table-borderless">
+      <tbody>
+        <tr>
+          <th scope="row">
+            <label class="fw-normal" for="name">Nama*</label>
+          </th>
+          <td>
+            <input class="form-control" type="text" placeholder="Uciha Rudy" id="name">
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">
+            <label class="fw-normal" for="price">Harga*</label>
+          </th>
+          <td>
+            <input class="form-control" type="number" placeholder="400000" id="price">
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">
+            <label class="fw-normal" for="photo">Foto*</label>
+          </th>
+          <td>
+            <input class="form-control" type="file" placeholder="400000" id="photo">
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">
+            <label class="fw-normal" for="start">Start Rent</label>
+          </th>
+          <td>
+            <input class="form-control" type="date" placeholder="-" id="start">
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">
+            <label class="fw-normal" for="finish">Finish Rent</label>
+          </th>
+          <td>
+            <input class="form-control" type="date" placeholder="-" id="finish">
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">
+            <label class="fw-normal" for="created">Created Rent</label>
+          </th>
+          <td>
+            <input class="form-control" type="date" placeholder="-" id="created">
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">
+            <label class="fw-normal" for="updated">Updated Rent</label>
+          </th>
+          <td>
+            <input class="form-control" type="date" placeholder="-" id="updated">
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="px-2">
+      <button class="btn btn-outline-danger" type="submit">Cancel</button>
+      <button class="btn btn-success" type="submit">Save</button>
+    </div>
+  </form>
+</div>
