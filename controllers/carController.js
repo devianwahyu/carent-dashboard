@@ -1,3 +1,4 @@
+const fs = require('fs');
 const Car = require('../models/Car');
 
 module.exports = {
@@ -7,7 +8,15 @@ module.exports = {
     res.redirect('/cars');
   },
   deleteCarById: async (req, res) => {
-    Car.deleteCarById(req.params.id);
-    res.redirect('/cars');
+    const fileName = await Car.findOne(req.params.id);
+    const path = `public/images/uploads/${fileName}`;
+    try {
+      fs.unlinkSync(path);
+      Car.deleteCarById(req.params.id);
+    } catch (err) {
+      console.error(err);
+    } finally {
+      res.redirect('/cars');
+    }
   },
 };

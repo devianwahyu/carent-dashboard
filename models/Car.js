@@ -75,4 +75,5 @@ module.exports = {
     cars.splice(cars.findIndex((car) => car.id == id), 1);
     return Promise.resolve(`Car with ${id} deleted`);
   },
+  findOne: (id) => Promise.resolve(cars[cars.findIndex((car) => car.id == id)].photo),
 };
