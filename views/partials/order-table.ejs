@@ -11,96 +11,23 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>user@gmail.com</td>
-      <td>Pajero Sport</td>
-      <td>12/03/2022</td>
-      <td>20/03/2022</td>
-      <td>Rp 300.000</td>
-      <td>Rented</td>
-    </tr>
-    <tr>
-      <th scope="row">1</th>
-      <td>user@gmail.com</td>
-      <td>Pajero Sport</td>
-      <td>12/03/2022</td>
-      <td>20/03/2022</td>
-      <td>Rp 300.000</td>
-      <td>Rented</td>
-    </tr>
-    <tr>
-      <th scope="row">1</th>
-      <td>user@gmail.com</td>
-      <td>Pajero Sport</td>
-      <td>12/03/2022</td>
-      <td>20/03/2022</td>
-      <td>Rp 300.000</td>
-      <td>Rented</td>
-    </tr>
-    <tr>
-      <th scope="row">1</th>
-      <td>user@gmail.com</td>
-      <td>Pajero Sport</td>
-      <td>12/03/2022</td>
-      <td>20/03/2022</td>
-      <td>Rp 300.000</td>
-      <td>Rented</td>
-    </tr>
-    <tr>
-      <th scope="row">1</th>
-      <td>user@gmail.com</td>
-      <td>Pajero Sport</td>
-      <td>12/03/2022</td>
-      <td>20/03/2022</td>
-      <td>Rp 300.000</td>
-      <td>Rented</td>
-    </tr>
-    <tr>
-      <th scope="row">1</th>
-      <td>user@gmail.com</td>
-      <td>Pajero Sport</td>
-      <td>12/03/2022</td>
-      <td>20/03/2022</td>
-      <td>Rp 300.000</td>
-      <td>Rented</td>
-    </tr>
-    <tr>
-      <th scope="row">1</th>
-      <td>user@gmail.com</td>
-      <td>Pajero Sport</td>
-      <td>12/03/2022</td>
-      <td>20/03/2022</td>
-      <td>Rp 300.000</td>
-      <td>Rented</td>
-    </tr>
-    <tr>
-      <th scope="row">1</th>
-      <td>user@gmail.com</td>
-      <td>Pajero Sport</td>
-      <td>12/03/2022</td>
-      <td>20/03/2022</td>
-      <td>Rp 300.000</td>
-      <td>Rented</td>
-    </tr>
-    <tr>
-      <th scope="row">1</th>
-      <td>user@gmail.com</td>
-      <td>Pajero Sport</td>
-      <td>12/03/2022</td>
-      <td>20/03/2022</td>
-      <td>Rp 300.000</td>
-      <td>Rented</td>
-    </tr>
-    <tr>
-      <th scope="row">1</th>
-      <td>user@gmail.com</td>
-      <td>Pajero Sport</td>
-      <td>12/03/2022</td>
-      <td>20/03/2022</td>
-      <td>Rp 300.000</td>
-      <td>Rented</td>
-    </tr>
+    <% if (cars.length > 0) { %>
+      <% cars.forEach(car => { %>
+        <tr>
+          <th scope="row"><%= car.id %></th>
+          <td>useremail@gmail.com</td>
+          <td><%= car.name %></td>
+          <td><%= new Date(car.startRent).toLocaleDateString() %></td>
+          <td><%= new Date(car.finishRent).toLocaleDateString() %></td>
+          <td>Rp <%= new Intl.NumberFormat(['ban', 'id']).format(Number(car.price))%></td>
+          <td>Status</td>
+        </tr>
+      <% }) %>
+    <% } else { %>
+      <tr>
+        <th colspan="8" class="text-center">Data mobil kosong</th>
+      </tr>
+    <% } %>
   </tbody>
 </table>
 <div class="d-flex align-items-end justify-content-between">

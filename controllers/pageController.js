@@ -1,13 +1,18 @@
 const Car = require('../models/Car');
 
 module.exports = {
-  dashboard: (req, res) => {
+  login: (req, res) => {
+    res.render('login');
+  },
+  dashboard: async (req, res) => {
+    const cars = await Car.findAll();
     const locals = {
       title: 'Dashboard',
       sidebarTitle: 'Dashboard',
       sidebarMenu: 'Dashboard',
       sidebarMenuLink: '/dashboard',
-      layout: 'layouts/layout'
+      layout: 'layouts/layout',
+      cars,
     };
     res.render('dashboard', locals);
   },
@@ -32,7 +37,7 @@ module.exports = {
       sectionTitle: 'Add New Car',
       breadcrumb: 'Add New Car',
       breadcrumbLink: 'add',
-      layout: 'layouts/layout'
+      layout: 'layouts/layout',
     };
     res.render('form-car', locals);
   },

@@ -1,4 +1,5 @@
 const express = require('express');
+
 const router = express.Router();
 
 router.get('/', (req, res) => {
@@ -10,7 +11,7 @@ router.get('/', (req, res) => {
     sectionTitle: 'Edit Car',
     breadcrumb: 'Edit Car',
     breadcrumbLink: 'edit',
-    layout: 'layouts/layout'
+    layout: 'layouts/layout',
   };
   res.render('form-car', locals);
 });

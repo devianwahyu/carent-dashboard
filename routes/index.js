@@ -1,13 +1,11 @@
-var express = require('express');
+const express = require('express');
 const page = require('./page');
 const car = require('./car');
-var router = express.Router();
+const auth = require('./auth');
 
-/* GET home page. */
-// router.get('/', function(req, res, next) {
-//   res.render('index', { title: 'Express' });
-// });
+const router = express.Router();
 
+router.use('/auth', auth);
 router.use('/', page);
 router.use('/car', car);
 

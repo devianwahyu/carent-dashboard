@@ -1,26 +1,33 @@
 <div class="d-flex sticky-top">
-  <div class="d-flex flex-column align-items-center flex-shrink-0 bg-primary" style="width: 4.5rem; height: 100vh;">
-    <div class="my-3">
-      <a href="/dashboard">
-        <img class="rounded" src="images/logo_sm.png" alt="logo small" width="30" height="30">
-      </a>
+  <div class="d-flex flex-column align-items-center justify-content-between flex-shrink-0 bg-primary" style="width: 4.5rem; height: 100vh;">
+    <div class="d-flex flex-column align-items-center" style="width: 100%;">
+      <div class="my-3">
+        <a href="/dashboard">
+          <img class="rounded" src="images/logo_sm.png" alt="logo small" width="30" height="30">
+        </a>
+      </div>
+      <div class="py-2" style="width: 100%;  font-size: 12px">
+        <a href="/dashboard">
+          <div class="d-flex flex-column align-items-center justify-content-center">
+            <img class="rounded" src="images/fi_home.svg" alt="dashboard" width="25" height="25">
+            <span class="text-white">Dashboard</span>
+          </div>
+        </a>
+      </div>
+      <div class="py-2" style="width: 100%;  font-size: 12px">
+        <a href="/cars">
+          <div class="d-flex flex-column align-items-center justify-content-center">
+            <img class="rounded" src="images/fi_truck.svg" alt="car" width="25" height="25">
+            <span class="text-white">Cars</span>
+          </div>
+        </a>
+      </div>
     </div>
-    <div class="py-2" style="width: 100%;  font-size: 12px">
-      <a href="/dashboard">
-        <div class="d-flex flex-column align-items-center justify-content-center">
-          <img class="rounded" src="images/fi_home.svg" alt="dashboard" width="25" height="25">
-          <span class="text-white">Dashboard</span>
-        </div>
-      </a>
-    </div>
-    <div class="py-2" style="width: 100%;  font-size: 12px">
-      <a href="/cars">
-        <div class="d-flex flex-column align-items-center justify-content-center">
-          <img class="rounded" src="images/fi_truck.svg" alt="car" width="25" height="25">
-          <span class="text-white">Cars</span>
-        </div>
-      </a>
-    </div>
+    <form class="mt-5 m-2" action="/auth/logout" method="post">
+      <button type="submit" class="btn btn-outline-primary">
+        <span class="text-white">Logout</span>
+      </button>
+    </form>
   </div>
 
   <div class="d-flex flex-column flex-shrink-0 bg-white" style="width: 17rem; height: 100vh;">

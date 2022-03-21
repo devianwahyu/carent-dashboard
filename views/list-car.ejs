@@ -18,8 +18,15 @@
     <button class="btn btn-outline-primary btn-sm px-2 fw-bold me-2">Large</button>
   </div>
   <div class="mt-4 d-flex gap-4 flex-wrap">
-    <% cars.forEach(car => { %>
-      <%- include('./partials/card.ejs', {car}) %>
-    <% }) %>
+    <% if (cars.length > 0) { %>
+      <% cars.forEach(car => { %>
+        <%- include('./partials/card.ejs', {car}) %>
+      <% }) %>
+    <% } else { %>
+      <div class="d-flex flex-column align-items-center justify-content-center flex-grow-1" style="height: 60vh;">
+        <img src="images/img-BeepBeep.png" alt="image">
+        <h1>Mobil Kosong</h1>
+      </div>
+    <% } %>
   </div>
 </div>

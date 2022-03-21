@@ -53,8 +53,11 @@ const cars = [
 
 module.exports = {
   findAll: () => Promise.resolve(cars),
-  create: ({ name, price, photo, startRent, finishRent, createdRent, updatedRent }) => {
-    const id = cars[cars.length-1].id + 1;
+  create: ({
+    name, price, photo, startRent, finishRent, createdRent, updatedRent,
+  }) => {
+    const idStart = cars.length > 0 ? cars[cars.length - 1].id : 0;
+    const id = idStart + 1;
     const car = {
       id,
       name,
@@ -63,13 +66,13 @@ module.exports = {
       startRent,
       finishRent,
       createdRent,
-      updatedRent
+      updatedRent,
     };
     cars.push(car);
     return Promise.resolve(car);
   },
   deleteCarById: (id) => {
-    cars.splice(cars.findIndex(car => car.id == id), 1);
+    cars.splice(cars.findIndex((car) => car.id == id), 1);
     return Promise.resolve(`Car with ${id} deleted`);
-  }
+  },
 };

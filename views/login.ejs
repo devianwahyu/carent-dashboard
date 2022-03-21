@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('partials/head');%>
+  <title>Login</title>
+</head>
+
+<body>
+  <div class="bg-primary d-flex flex-column flex-sm-column flex-md-row flex-lg-row" style="height: 100vh;">
+    <img class="w-75" src="images/image-2.png" alt="gambar mobil" />
+    <div class="flex-grow-1 d-flex align-items-center justify-content-center bg-white">
+      <div class="d-flex flex-column flex-grow-1 m-5 p-2">
+        <img class="rounded w-25" src="images/logo.png" alt="Logo">
+        <h3 class="fw-bold my-4 fs-2">Welcome, Admin BCR </h3>
+        <form class="d-flex flex-column" action="/auth/login" method="post">
+          <label class="fs-5 fw-light mb-2" for="email">Email</label>
+          <input type="email" class="form-control mb-3" id="email" name="email" placeholder="Contoh johndoe@gmail.com">
+          <label class="fs-5 fw-light mb-2" for="password">Password</label>
+          <input type="password" class="form-control mb-3" id="password" name="password" placeholder="6+ karakter">
+          <button class="btn btn-primary btn-lg mt-4" type="submit">Sign in</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
