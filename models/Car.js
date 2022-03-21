@@ -66,7 +66,10 @@ module.exports = {
       updatedRent
     };
     cars.push(car);
-    console.log(typeof priceNum)
     return Promise.resolve(car);
   },
+  deleteCarById: (id) => {
+    cars.splice(cars.findIndex(car => car.id == id), 1);
+    return Promise.resolve(`Car with ${id} deleted`);
+  }
 };
