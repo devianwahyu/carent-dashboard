@@ -75,5 +75,21 @@ module.exports = {
     cars.splice(cars.findIndex((car) => car.id == id), 1);
     return Promise.resolve(`Car with ${id} deleted`);
   },
-  findOne: (id) => Promise.resolve(cars[cars.findIndex((car) => car.id == id)].photo),
+  findOne: (id) => Promise.resolve(cars[cars.findIndex((car) => car.id == id)]),
+  editById: ({
+    id, name, price, photo, startRent, finishRent, createdRent, updatedRent,
+  }) => {
+    const car = {
+      id,
+      name,
+      price,
+      photo,
+      startRent,
+      finishRent,
+      createdRent,
+      updatedRent,
+    };
+    cars[id - 1] = car;
+    return Promise.resolve(car);
+  },
 };

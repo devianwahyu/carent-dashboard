@@ -23,7 +23,8 @@ const dataPass = (req, res, next) => {
   next();
 };
 
-router.post('/', upload.single('photo'), dataPass, car.addCar);
+router.post('/add', upload.single('photo'), dataPass, car.addCar);
+router.post('/edit', upload.single('photo'), dataPass, car.editCarById);
 router.post('/delete/:id', car.deleteCarById);
 
 module.exports = router;

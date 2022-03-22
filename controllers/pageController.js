@@ -29,6 +29,7 @@ module.exports = {
     res.render('list-car', locals);
   },
   addCar: (req, res) => {
+    const car = [];
     const locals = {
       title: 'Add New Car',
       sidebarTitle: 'Cars',
@@ -38,6 +39,22 @@ module.exports = {
       breadcrumb: 'Add New Car',
       breadcrumbLink: 'add',
       layout: 'layouts/layout',
+      car,
+    };
+    res.render('form-car', locals);
+  },
+  editCar: async (req, res) => {
+    const car = await Car.findOne(req.params.id);
+    const locals = {
+      title: 'Edit Car',
+      sidebarTitle: 'Cars',
+      sidebarMenu: 'List Car',
+      sidebarMenuLink: '/cars',
+      sectionTitle: 'Edit Car',
+      breadcrumb: 'Edit Car',
+      breadcrumbLink: 'edit',
+      layout: 'layouts/layout',
+      car,
     };
     res.render('form-car', locals);
   },

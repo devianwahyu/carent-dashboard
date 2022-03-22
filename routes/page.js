@@ -15,5 +15,6 @@ router.use(isAuthenticated);
 router.get('/cars', page.listCar);
 router.get('/dashboard', page.dashboard);
 router.get('/add', page.addCar);
+router.get('/edit/:id', page.editCar);
 
 module.exports = router;
