@@ -17,7 +17,7 @@
     <button class="btn btn-outline-primary btn-sm px-2 fw-bold me-2">Medium</button>
     <button class="btn btn-outline-primary btn-sm px-2 fw-bold me-2">Large</button>
   </div>
-  <div class="mt-4 d-flex gap-4 flex-wrap">
+  <div class="mt-4 d-flex gap-2 flex-wrap">
     <% if (cars.length > 0) { %>
       <% cars.forEach(car => { %>
         <%- include('./partials/card.ejs', {car}) %>
